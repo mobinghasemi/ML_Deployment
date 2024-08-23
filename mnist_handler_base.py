@@ -6,9 +6,7 @@ from mnist import Net
 import torch
 import json
 import os
-#import logging
 
-#logger = logging.getLogger(__name__)
 
 class MNISTHandler(BaseHandler):
 
