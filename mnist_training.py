@@ -175,9 +175,4 @@ for epoch in range(num_epochs):
             # Print Loss
             print('Iteration: {}. Loss: {}. Accuracy: {}'.format(iter, loss.data, accuracy))
             
-file_path = 'mnist.pth'
-
-# Open the file in binary mode
-with open(file_path, 'wb') as file:
-    # Serialize and write the variable to the file
-    pickle.dump(model, file)
+torch.save(model.state_dict(), 'mnist.pt')
