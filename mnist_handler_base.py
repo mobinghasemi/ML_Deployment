@@ -2,7 +2,7 @@ import io
 from ts.torch_handler.base_handler import BaseHandler
 from torchvision import transforms
 from PIL import Image
-from mnist import Net
+from arch import CNNModel
 import torch
 import json
 import os
