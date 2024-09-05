@@ -33,7 +33,7 @@ def predict():
         logging.debug(f"Image saved to: {img_path}")
 
         try:
-            res = requests.post("http://torchserve-mar:8080/predictions/mnist", files={'data': open(img_path, 'rb')})
+            res = requests.post("http://torchserve-mar:8080/predictions/xray", files={'data': open(img_path, 'rb')})
             logging.debug(f"Status code: {res.status_code}")
             prediction = res.text
             logging.debug(f"Response content: {prediction}")
