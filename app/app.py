@@ -28,7 +28,7 @@ def predict():
         basedir = os.path.abspath(os.path.dirname(__file__))
         img_path = os.path.join(basedir, app.config['IMAGE_UPLOADS'], filename)
         image.save(img_path)
-        res = requests.post("http://torchserve-mar:8080/predictions/mnist", files={'data': open(img_path, 'rb')})
+        res = requests.post("http://torchserve-mar:8080/predictions/xray", files={'data': open(img_path, 'rb')})
         prediction = res.json()
 
     return render_template('index.html', prediction_text=f'Predicted Number: {prediction}')
