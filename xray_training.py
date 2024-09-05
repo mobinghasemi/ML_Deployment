@@ -66,6 +66,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # Train the model
 for epoch in range(40):
+    model.train()
     running_loss = 0.0
     for i, data in enumerate(train_loader, 0):
         inputs, labels = data
