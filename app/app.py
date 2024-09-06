@@ -32,17 +32,32 @@ def predict():
         image.save(img_path)
         logging.debug(f"Image saved to: {img_path}")
 
+        message = ""
+        prediction = None  # define prediction variable here
+
         try:
             res = requests.post("http://torchserve-mar:8080/predictions/xray", files={'data': open(img_path, 'rb')})
             logging.debug(f"Status code: {res.status_code}")
-            prediction = res.text
-            logging.debug(f"Response content: {prediction}")
-        
+            if res.status_code == 200:
+                response_json = res.json()
+                if isinstance(response_json, int):  # check if response_json is an integer
+                    prediction = response_json  # assign the integer value to prediction
+                else:
+                    prediction = response_json['prediction']  # assign the value from the 'prediction' key to prediction
+                logging.debug(f"Response content: {prediction}")
+                
+                if prediction == 0:
+                    message = "Normal"
+                elif prediction == 1:
+                    message = "Sick"
+            else:
+                logging.error("Failed to get response from TorchServe model")
+                message = "Error: Failed to get response"
         except Exception as e:
             logging.error(f"Exception occurred: {str(e)}")
-            prediction = f"Error: {str(e)}"
-
-        return render_template('index.html', prediction_text=f'Prediction: {prediction}')
+            message = f"Error: {str(e)}"
+            
+        return render_template('index.html', prediction_text=message) 
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=9696)
