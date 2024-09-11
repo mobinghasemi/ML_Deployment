@@ -30,7 +30,7 @@ Mnist and Chest Classification is a deep learning project that uses PyTorch to c
 ### Installation
 * Clone the repository: `git clone https://github.com/mobinghasemi/ML_Deployment.git`
 * 
-### Running
+### Running the Project
 #### MnistApp
 ##### VScode Terminal
 ```dockerfile
@@ -55,9 +55,30 @@ torchserve --start --model-store /home/model-server/model-store --models mnist=m
 localhost:9696
 ```
 
-### Running the Project
-* Run the Docker container: `docker run -p 8080:8080 mnist-chest-classification`
-* Access the TorchServe server: `http://localhost:8080`
+#### XrayApp
+##### VScode Terminal
+```dockerfile
+dockercompose up --bulid
+```
+##### PC Terminal
+```dockerfile
+docker ps
+docker exec -u 0 -it container-id(torchserve container) /bin/bash
+```
+```bash
+cd /
+cd /codes
+ls -ltrha
+torch-model-archiver --model-name xray --version 1.0 --model-file xray_arch.py --serialized-file xray.pt --handler xray_handler_base.py --force
+cp mnist.mar /home/model-server/model-store
+torchserve --stop
+torchserve --start --model-store /home/model-server/model-store --models xray=xray.mar --disable-token-auth --enable-model-api --ts-config /home/model-server/config.properties    
+```
+##### Browser
+```curl
+localhost:9696
+```
+
 
 ## Usage
 * Use the TorchServe API to send inference requests to the model
