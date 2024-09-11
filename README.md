@@ -1,7 +1,7 @@
 <h1 style="text-align: center;">ML_Deployment</h1>
 
 # Mnist & Chest Xray-Image Classification Using PyTorch & Deploy on TorchServe Server Using Docker & Docker Compose
-===========================================================================================
+============================================================================================
 
 ## Introduction
 Mnist and Chest Classification is a deep learning project that uses PyTorch to classify Mnist and Chest X-ray images. The project also demonstrates how to deploy the model on TorchServe server using Docker and Docker Compose.
