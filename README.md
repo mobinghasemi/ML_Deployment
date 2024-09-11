@@ -28,10 +28,14 @@ Mnist and Chest Classification is a deep learning project that uses PyTorch to c
 * Docker and Docker Compose installed on your system
 
 ### Installation
-* Clone the repository: `git clone https://github.com/your-username/mnist-chest-classification.git`
-* Install dependencies: `pip install -r requirements.txt`
-* Build the Docker image: `docker build -t mnist-chest-classification .`
-
+* Clone the repository: `git clone https://github.com/mobinghasemi/ML_Deployment.git`
+* 
+### Running
+#### MnistApp
+##### VScode terminal
+```dockerfile
+dockercompose up --bulid
+```
 ### Running the Project
 * Run the Docker container: `docker run -p 8080:8080 mnist-chest-classification`
 * Access the TorchServe server: `http://localhost:8080`
