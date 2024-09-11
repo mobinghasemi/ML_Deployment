@@ -82,7 +82,8 @@ localhost:9696
 
 ## Outputs
 ### XrayApp
-(![XrayApp](output_images/model_architecture.png))
+(![XrayApp](output_images/xray1.png))
+(![XrayApp](output_images/xray2.png))
 ### MnistApp
 ![MnistApp](https://cdn.path.to/some/image.jpg "This is some image...")
 
