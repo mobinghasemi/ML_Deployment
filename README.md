@@ -70,7 +70,7 @@ cd /
 cd /codes
 ls -ltrha
 torch-model-archiver --model-name xray --version 1.0 --model-file xray_arch.py --serialized-file xray.pt --handler xray_handler_base.py --force
-cp mnist.mar /home/model-server/model-store
+cp xray.mar /home/model-server/model-store
 torchserve --stop
 torchserve --start --model-store /home/model-server/model-store --models xray=xray.mar --disable-token-auth --enable-model-api --ts-config /home/model-server/config.properties    
 ```
