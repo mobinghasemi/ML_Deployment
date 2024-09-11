@@ -32,10 +32,16 @@ Mnist and Chest Classification is a deep learning project that uses PyTorch to c
 * 
 ### Running
 #### MnistApp
-##### VScode terminal
+##### VScode Terminal
 ```dockerfile
 dockercompose up --bulid
 ```
+##### PC Teminal
+```dockerfile
+docker ps
+docker exec -u 0 -it container-id(torchserve container) /bin/bash
+```
+
 ### Running the Project
 * Run the Docker container: `docker run -p 8080:8080 mnist-chest-classification`
 * Access the TorchServe server: `http://localhost:8080`
