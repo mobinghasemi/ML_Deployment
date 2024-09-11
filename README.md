@@ -10,7 +10,7 @@ Mnist and Chest Classification is a deep learning project that uses PyTorch to c
 ### Model Training
 * Train a PyTorch model on Mnist and Chest X-ray datasets
 * Implement data augmentation and preprocessing techniques
-* Use transfer learning to improve model performance
+* implement model from scratch and save on .pt files
 
 ### Model Deployment
 * Deploy the trained model on TorchServe server using Docker
