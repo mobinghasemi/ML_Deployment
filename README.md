@@ -80,6 +80,12 @@ localhost:9696
 ```
 
 
+## Outputs
+### XrayApp
+![XrayApp](https://cdn.path.to/some/image.jpg "This is some image...")
+### MnistApp
+![MnistApp](https://cdn.path.to/some/image.jpg "This is some image...")
+
 ## Usage
 * Use the TorchServe API to send inference requests to the model
 * Use the provided Python script to test the model and visualize the results
