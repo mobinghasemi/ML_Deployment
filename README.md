@@ -1,4 +1,10 @@
-<h1 style="text-align: center;">ML_Deployment</h1>
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
+
+<h1>ML_Deployment</h1>
 # Mnist & Chest Classification Using PyTorch & Deploy on TorchServe Server Using Docker & Docker Compose
 ===========================================================================================
 
