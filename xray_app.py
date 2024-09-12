@@ -36,7 +36,7 @@ def predict():
         prediction = None  # define prediction variable here
 
         try:
-            res = requests.post("http://torchserve-mar:8080/predictions/mnist", files={'data': open(img_path, 'rb')})
+            res = requests.post("http://torchserve-mar:8080/predictions/xray", files={'data': open(img_path, 'rb')})
             logging.debug(f"Status code: {res.status_code}")
             if res.status_code == 200:
                 response_json = res.json()
@@ -46,20 +46,10 @@ def predict():
                     prediction = response_json['prediction']  # assign the value from the 'prediction' key to prediction
                 logging.debug(f"Response content: {prediction}")
                 
-                # Map the prediction to the corresponding MNIST digit
-                digit_map = {
-                    0: "Zero",
-                    1: "One",
-                    2: "Two",
-                    3: "Three",
-                    4: "Four",
-                    5: "Five",
-                    6: "Six",
-                    7: "Seven",
-                    8: "Eight",
-                    9: "Nine"
-                }
-                message = digit_map.get(prediction, "Unknown digit")
+                if prediction == 0:
+                    message = "Normal"
+                elif prediction == 1:
+                    message = "Sick"
             else:
                 logging.error("Failed to get response from TorchServe model")
                 message = "Error: Failed to get response"
