@@ -25,6 +25,7 @@ Mnist and Chest Classification is a deep learning project that uses PyTorch to c
 * <img src="https://user-images.githubusercontent.com/25181517/192158606-7c2ef6bd-6e04-47cf-b5bc-da2797cb5bda.png" width="50" height="50" alt="Icon">
 * <img src="https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png" width="50" height="50" alt="Icon">
 * <img src="https://github.com/marwin1991/profile-technology-icons/assets/76662862/2481dc48-be6b-4ebb-9e8c-3b957efe69fa" width="50" height="50" alt="Icon">
+* <img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" width="100" height="30" alt="Shell Script Badge">
 
 
 
