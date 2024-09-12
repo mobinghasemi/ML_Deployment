@@ -89,7 +89,7 @@
     <br>
 
 {% if prediction_text %}
-<div class="alert alert-{% if prediction_text == "Normal" %}success{% else %}danger{% endif %}" role="alert">
+<div class="alert alert-{% if prediction_text == 'Normal'%}success{% else %}danger{% endif %}" role="alert">
     {% if prediction_text == "Normal" %}{{prediction_text}}{% else %}{{prediction_text}} {% endif %}
 </div>
 {% endif %}
