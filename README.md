@@ -81,11 +81,13 @@ localhost:9696
 
 
 ## Outputs
+### MnistApp
+![MnistApp](output_images/mnist1.png)
+![MnistApp](output_images/mnist2.png)
 ### XrayApp
 ![XrayApp](output_images/xray1.png)
 ![XrayApp](output_images/xray2.png)
-### MnistApp
-![MnistApp](https://cdn.path.to/some/image.jpg "This is some image...")
+
 
 ## Usage
 * Use the TorchServe API to send inference requests to the model
