@@ -32,6 +32,8 @@ Mnist and Chest Classification is a deep learning project that uses PyTorch to c
 * 
 ### Running the Project
 #### MnistApp
+* copy mnist_index.html to the /app/templates/index.html
+* copy mnist_app.py to the /app/app.py
 ##### VScode Terminal
 ```dockerfile
 docker compose up --bulid
@@ -56,6 +58,8 @@ localhost:9696
 ```
 
 #### XrayApp
+* copy xray_index.html to the /app/templates/index.html
+* copy xray_app.py to the /app/app.py
 ##### VScode Terminal
 ```dockerfile
 docker compose up --bulid
