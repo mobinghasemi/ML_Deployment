@@ -46,7 +46,7 @@ Mnist and Chest Classification is a deep learning project that uses PyTorch to c
 
 ### Docker and Docker Compose
 * Create a Docker image for the PyTorch model
-* Use Docker Compose to manage multiple containers for the model, TorchServe server, and database
+* Use Docker Compose to manage multiple containers for the model, TorchServe.
 
 ## Getting Started
 ### Prerequisites
